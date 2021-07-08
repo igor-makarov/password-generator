@@ -1,4 +1,4 @@
-!(function(w, d, l, c, a, change, click, checked, value, pInt, length, mathMax, mathMin) {
+!(function(w, d, l, c, a, change, input, click, checked, value, pInt, length, mathMax, mathMin) {
     let body
     let generatedPasswordWrapper
     let passwordField
@@ -339,6 +339,11 @@
             saveConfig()
         })
 
+        passwordLengthSlider[a](input, function() {
+            updatePasswordLength(passwordLengthSlider[value])
+            saveConfig()
+        })
+
         passwordLengthInput[a](change, function() {
             updatePasswordLength(passwordLengthInput[value])
             saveConfig()
@@ -425,6 +430,7 @@
     'querySelector', 
     'addEventListener', 
     'change', 
+    'input', 
     'click', 
     'checked', 
     'value',
