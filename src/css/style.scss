@@ -348,18 +348,6 @@ legend {
     box-shadow: 2px 2px 30px 4px rgba(27, 62, 119, 0.36);
     cursor: pointer;
     pointer-events: visible;
-
-    &:after {
-        content: ' ';
-        position: absolute;
-        width: 80px;
-        height: 100%;
-        top: 0;
-        right: 0;
-        background: linear-gradient(to right, var(--w400-0), var(--b400) 75%);
-        border-radius: 0 $border-radius-unit $border-radius-unit 0;
-        pointer-events: none;
-    }
 }
 
 .generated-password-inner {

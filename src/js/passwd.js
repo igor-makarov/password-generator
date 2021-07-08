@@ -209,6 +209,7 @@
         password = shuffle(password, config.numShuffles)
         passwordField.textContent = password
         generatedPasswordWrapper.style.display = 'flex'
+        passwordField.style.fontSize = `${110/config.passwordLength}vw`
     }
 
     function pickRandomChar(s) {
