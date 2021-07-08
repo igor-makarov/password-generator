@@ -339,12 +339,12 @@ legend {
 .generated-password-self {
     position: relative;
     width: 50%;
-    min-width: 250px;
     background: var(--b400);
     border-radius: $border-radius-unit;
     padding: $padding;
     color: var(--w200);
     font-size: 3em;
+    text-align: center;
     box-shadow: 2px 2px 30px 4px rgba(27, 62, 119, 0.36);
     cursor: pointer;
     pointer-events: visible;
@@ -357,6 +357,7 @@ legend {
 #password-field {
     font-family: 'Courier New', Courier, monospace;
     white-space: nowrap;
+    font-size: 40%;
 
     &::selection {
         background: var(--b500);
