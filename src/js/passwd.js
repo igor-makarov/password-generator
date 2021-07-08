@@ -216,8 +216,20 @@
         return s[pickPosition(s)]
     }
 
+    function random(min, max) {
+        var byteArray = new Uint32Array(1)
+        window.crypto.getRandomValues(byteArray)
+    
+        var range = max - min
+        var max_range = 2 ** 32
+        while (byteArray[0] >= Math.floor(max_range / range) * range) {
+            window.crypto.getRandomValues(byteArray)
+        }
+        return min + (byteArray[0] % range)
+    }
+
     function pickPosition(s) {
-        return Math.floor(Math.random() * s[length])
+        return random(0, s[length])
     }
 
     function shuffle(s, n) {
