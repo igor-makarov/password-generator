@@ -72,6 +72,7 @@ footer {
   position: relative;
   display: flex;
   align-items: baseline;
+  text-align: center;
   justify-content: space-between; }
   footer p {
     font-size: 0.7em;
