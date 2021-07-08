@@ -17,6 +17,8 @@ $border-radius-unit: 6px;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
     margin: 0;
     padding: 0;
 }
