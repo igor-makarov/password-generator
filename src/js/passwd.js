@@ -137,6 +137,18 @@
         }
     }
 
+    function random(min, max) {
+        var byteArray = new Uint32Array(1)
+        window.crypto.getRandomValues(byteArray)
+    
+        var range = max - min
+        var max_range = 2 ** 32
+        while (byteArray[0] >= Math.floor(max_range / range) * range) {
+            window.crypto.getRandomValues(byteArray)
+        }
+        return min + (byteArray[0] % range)
+    }
+
     function generatePassword() {
         copiedSpan.classList.remove('show')
 
@@ -189,7 +201,7 @@
         }
 
         while( password[length] < config.passwordLength && charClassesWithoutFilledMax.size > 0 ) {
-            let pos = Math.floor(Math.random() * numCharacters)
+            let pos = random(0, numCharacters)
 
             for(let c of charClassesWithoutFilledMax) {
                 if(pos < charClasses[c].c[length]) {
@@ -214,18 +226,6 @@
 
     function pickRandomChar(s) {
         return s[pickPosition(s)]
-    }
-
-    function random(min, max) {
-        var byteArray = new Uint32Array(1)
-        window.crypto.getRandomValues(byteArray)
-    
-        var range = max - min
-        var max_range = 2 ** 32
-        while (byteArray[0] >= Math.floor(max_range / range) * range) {
-            window.crypto.getRandomValues(byteArray)
-        }
-        return min + (byteArray[0] % range)
     }
 
     function pickPosition(s) {
