@@ -20,7 +20,7 @@
 
 body {
   background: var(--w200);
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   /* padding: $padding; */
   margin: 0;
   /* display: flex; */
